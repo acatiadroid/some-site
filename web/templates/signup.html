@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body style="margin-left: auto; margin-right: auto;">
+        <ul>
+            <li><a href="{{url_for('main')}}">Home</a></li>
+            <li><a href="news.asp">My profile</a></li>
+            <li><a href="contact.asp">Contact</a></li>
+            <li><a href="about.asp">About</a></li>
+            <li style="float:right;background-color: rgb(187, 174, 56);"><a href="{{url_for('login')}}">Login</a></li>
+          </ul>
+          <div style="padding:20px;margin-top:30px;background-color:#474747;height:1500px;width: 100%;color: white;">
+            <h1>Create a new account</h1>
+            <div class="theform">
+                <form action="{{url_for('new_customer')}}" method="post">
+                  <input type="text" id="username" name="username" placeholder="Enter a username">
+                  <br>
+                  <input type="password" id="pw" name="pw" placeholder="Enter a password">
+                
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+          </div>  
+</html>
